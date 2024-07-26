@@ -59,7 +59,7 @@ const About = () => {
           culinary experience. Enjoy the convenience of pickup or delivery when
           ordering through Beyond Menu.
         </p>
-        <button className="space-links text-lg text-[#AB8A54] flex mt-2">
+        <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#AB8A54]">
           Learn more -&gt;
         </button>
       </motion.div>

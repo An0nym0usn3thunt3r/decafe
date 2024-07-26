@@ -4,6 +4,7 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import MenuCard from "./MenuCard";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Menu = () => {
   const containerVariants = {
@@ -56,19 +57,24 @@ const Menu = () => {
         ></div>
       </div>
       <motion.div
-        className="grid mx-auto gap-x-10 lg:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+        className="grid mx-auto gap-x-10 lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <MenuCard />
-        <MenuCard />
-        <MenuCard />
+        <MenuCard src="/chole.jpg" title="Chana Puri" />
+        <MenuCard src="/pizza.jpg" title="Margarita Pizza" />
+        <MenuCard src="/panip.jpg" title="Pani Puri" />
+        <MenuCard src="/papdi.jpg" title="Dahi Papdi Chaat" />
+        <MenuCard src="/mexi.jpg" title="Mexican Sandwich" />
+        <MenuCard src="/panip.jpg" title="Pani Puri" />
       </motion.div>
-      <div className="flex justify-end">
-        <button className="space-links text-lg text-[#AB8A54] flex pr-5">
-          View All Menu -&gt;
-        </button>
+      <div className="flex justify-end pr-2">
+        <Link href="/menu">
+        <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#AB8A54]">
+            View All Menu -&gt;
+          </button>
+        </Link>
       </div>
     </div>
   );

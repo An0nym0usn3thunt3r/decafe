@@ -49,7 +49,7 @@ const Hero = () => {
           <button className="px-14 py-3 rounded-md border-x-2 border-y-[3px] tracking-wider font-medium border-[#AB8A54]">
             Order Online
           </button>
-          <button className="space-links text-lg text-[#AB8A54] ">
+          <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#AB8A54] items-center">
             Menu -&gt;
           </button>
         </div>
