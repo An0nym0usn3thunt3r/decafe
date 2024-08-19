@@ -66,7 +66,7 @@ const Menu = () => {
         <MenuCard src="/Pizza-3007395.jpg" title="Margarita Pizza" />
         <MenuCard src="/Pani Puri.JPG" title="Pani Puri" />
         <MenuCard src="/Dahi Papdi Chaat.webp" title="Dahi Papdi Chat" />
-        <MenuCard src="/mexi.jpg" title="Mexican Sandwich" />
+        <MenuCard src="/koila.jpg" title="Mexican Sandwich" />
         <MenuCard src="/gangaghatkichat.JPG" title="Ganga Ghat ki Chaat" />
       </motion.div>
       <div className="flex justify-end pr-2">
