@@ -20,7 +20,7 @@ const Menu = () => {
   };
   return (
     <div className="pt-40 flex flex-col max-w-7xl mx-auto bg-[#15181E]">
-      <h4 className="text-xl text-[#AB8A54] font-medium text-center">
+      <h4 className="text-xl text-[#d67f2e] font-medium text-center">
         From Our Menu
       </h4>
       <h1 className="text-2xl text-center  lg:text-3xl tracking-wide font-semibold">
@@ -31,20 +31,20 @@ const Menu = () => {
           className="w-full mt-5 h-px max-w-[40rem]  flex justify-center"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, #AB8A54 50%, rgba(149, 131, 198, 0.3) 67.2%, rgba(149, 131, 198, 0) 100%)",
+              "linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, #d67f2e 50%, rgba(149, 131, 198, 0.3) 67.2%, rgba(149, 131, 198, 0) 100%)",
           }}
         ></div>
         <div className="flex flex-col mt-5 ">
           <div
             className="w-0 h-0 
             border-l-[5px] border-l-transparent
-            border-b-[10px] border-b-[#AB8A54]
+            border-b-[10px] border-b-[#d67f2e]
             border-r-[5px] border-r-transparent"
           ></div>
           <div
             className="w-0 h-0 
             border-l-[5px] border-l-transparent
-            border-t-[10px] border-t-[#AB8A54]
+            border-t-[10px] border-t-[#d67f2e]
             border-r-[5px] border-r-transparent"
           ></div>
         </div>
@@ -52,7 +52,7 @@ const Menu = () => {
           className="w-full mt-5 h-px max-w-xl  flex justify-center"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, #AB8A54 50%, rgba(149, 131, 198, 0.3) 67.2%, rgba(149, 131, 198, 0) 100%)",
+              "linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, #d67f2e 50%, rgba(149, 131, 198, 0.3) 67.2%, rgba(149, 131, 198, 0) 100%)",
           }}
         ></div>
       </div>
@@ -65,13 +65,13 @@ const Menu = () => {
         <MenuCard src="/chole.jpg" title="Chana Puri" />
         <MenuCard src="/pizza.jpg" title="Margarita Pizza" />
         <MenuCard src="/panip.jpg" title="Pani Puri" />
-        <MenuCard src="/papdi.jpg" title="Dahi Papdi Chaat" />
+        <MenuCard src="/Dahi Papdi Chaat.webp" title="Dahi Papdi Chat" />
         <MenuCard src="/mexi.jpg" title="Mexican Sandwich" />
-        <MenuCard src="/panip.jpg" title="Pani Puri" />
+        <MenuCard src="/gangaghatkichat.JPG" title="Ganga Ghat ki Chaat" />
       </motion.div>
       <div className="flex justify-end pr-2">
         <Link href="/menu">
-        <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#AB8A54]">
+        <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#d67f2e]">
             View All Menu -&gt;
           </button>
         </Link>

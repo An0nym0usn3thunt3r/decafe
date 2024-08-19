@@ -9,7 +9,7 @@ const NavLinks = () => {
   return (
     <>
         {navLinks.map((item, index) => (
-            <Link key={index} href={item.src} className={`hover:text-[#AB8A54]/80 text-white text-lg font-medium ${pathname === item.src && "text-[#AB8A55] underline underline-offset-4 decoration-2"}`}>
+            <Link key={index} href={item.src} className={`hover:text-[#d67f2e]/80 text-white text-lg font-medium ${pathname === item.src && "text-[#AB8A55] underline underline-offset-4 decoration-2"}`}>
                 {item.name}
             </Link>
         ))}

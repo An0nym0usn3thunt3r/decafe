@@ -1,109 +1,193 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+import MenuCard from "@/components/MenuCard";
 import React from "react";
+import { motion } from "framer-motion";
 
 const MenuPage = () => {
-  const menuItems = [
-    { title: "Fast Food Menu", image: "/chole.jpg" },
-    { title: "Main Course", image: "/chole.jpg" },
-    { title: "Desserts", image: "/chole.jpg" },
-  ];
-
+  const containerVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.43, 0.13, 0.23, 0.96],
+      },
+    },
+  };
   return (
-    <div className="pt-16 md:pt-24 lg:pt-[10rem] max-w-7xl mx-auto text-white px-4 sm:px-6 lg:px-8 xl:px-0">
-      <div className="flex flex-col gap-y-8 md:gap-y-12">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl tracking-wide font-semibold">
+    <div className="pt-[10rem] max-w-7xl mx-auto text-white xl:px-0 px-5">
+      <div className="flex flex-col gap-y-5">
+        <h1 className="text-2xl lg:text-4xl tracking-wide font-semibold">
           Our Menu
         </h1>
-        <p className="text-muted-foreground text-sm md:text-base lg:text-lg max-w-md lg:max-w-2xl font-medium">
+        <p className="text-muted-foreground text-md lg:text-lg max-w-md lg:max-w-2xl font-medium">
           Your favorite local restaurant is now available for pick-up and
           delivery options now with Beyond Menu
         </p>
-        
-        {menuItems.map((item, index) => (
-          <div key={index} className="flex flex-col lg:flex-row gap-8">
-            {index % 2 === 0 ? (
-              <>
-                <MenuCard title={item.title} />
-                <ImageCard imageSrc={item.image} className="hidden lg:block" />
-              </>
-            ) : (
-              <>
-                <ImageCard imageSrc={item.image} className="hidden lg:block" />
-                <MenuCard title={item.title} />
-              </>
-            )}
-          </div>
-        ))}
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Chit Chat
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/Pani Puri.JPG" title="Pani Puri" />
+          <MenuCard src="/Dahi Papdi Chaat.webp" title="Dahi Papdi Chat" />
+          <MenuCard src="/sev puri.webp" title="Sev Puri" />
+          <MenuCard src="/Bhel.webp" title="Bhel" />
+          <MenuCard src="/Ragada Petties.webp" title="Ragada petties" />
+          <MenuCard src="/samosa chaat.webp" title="Samosa Chaat" />
+          <MenuCard src="/dahipuri.jpg" title="Dahi Puri" />
+          <MenuCard src="/dahibhalle.jpg" title="Dahi Bhalla" />
+          <MenuCard src="/chillipaneer.jpeg" title="Paneer Chilli" />
+          <MenuCard src="/alootikkichat.webp" title="Aloo Tikki Chaat" />
+          <MenuCard src="/chinesebhel.jpg" title="Chinese Bhel" />
+          <MenuCard src="/gangaghatkichat.JPG" title="Ganga Ghat ki Chaat" />
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Sides
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/breadbutter.jpg" title="Bread Butter" />
+          <MenuCard src="/vegsandvich.jpg" title="Vegetable sandwich" />
+          <MenuCard src="/vegcheesesandvich.webp" title="Veg cheese sandwich" />
+          <MenuCard src="/cheesecorn.webp" title="Cheese corn peri peri sandwich" />
+          <MenuCard src="/mexi.jpg" title="Mexican sandwich" />
+          <MenuCard src="/mayosand.jpg" title="Mayo toast sandwich" />
+          <MenuCard src="/paneer.jpg" title="Paneer takatak sandwich" />
+          {/* <MenuCard src="/panip.jpg" title="Cheesy Tex-Mex Focaccia" /> */}
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Bun Run Fries
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/alootikki.jpg" title="Aloo Tikki Burger" />
+          <MenuCard src="/vegburger.jpg" title="Vegetable Burger" />
+          <MenuCard src="/vegcheese.jpg" title="Cheese Burger(veg)" />
+          <MenuCard src="/paneerburger.jpg" title="Paneer Takatak Burger" />
+          <MenuCard src="/frenchfries.jpg" title="French-Fries" />
+          <MenuCard src="/ultapulta.jpg" title="Ulta Pulta Burger" />
+          <MenuCard src="/periperi.webp" title="Peri Peri French-Fries" />
+          <MenuCard src="/mexicanfries.jpg" title="Mexican Fries" />
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Bhaji Bonanza& Channa Bazaar
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/masalapav.jpeg" title="Butter Masala - Pav" />
+          <MenuCard src="/butterbhaji.webp" title="Butter Bhaaji - Pav" />
+          <MenuCard src="/buttercheese.jpg" title="Cheese Bhaaji - Pav" />
+          <MenuCard src="/vegpulao.jpg" title="Veg pulao" />
+          <MenuCard src="/vegtawa.jpg" title="Veg Tawa pulao" />
+          <MenuCard src="/chole.jpg" title="Chana Puri / Kulche" />
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Wrap It Up
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/vegwrap.jpg" title="Vegetable Wraps" />
+          <MenuCard src="/vegcheese.webp" title="Veg cheese Wraps" />
+          <MenuCard src="/paneerwrap.jpg" title="Paneer Masala Wraps" />
+          <MenuCard src="/paneercheese.jpg" title="Cheesy Peri-Peri Wraps" />
+          <MenuCard src="/cornwrap.jpg" title="Cheesy corn salsa Wraps" />
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Breads
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/paneertikka.jpg" title="Paneer tikka garlic bread" />
+          <MenuCard src="/4cheese.jpg" title="four cheese garlic bread" />
+          <MenuCard src="/creamcheese.jpeg" title="Cream Cheese garlic bread" />
+          <MenuCard src="/stuffed.webp" title="Stuffed garlic bread" />
+          <MenuCard src="/cheesydip.jpg" title="Cheesy dip" />
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          MockTails
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/classicmojito.jpg" title="Classic Mojito" />
+          <MenuCard src="/orange.jpg" title="Orange Peach Blossom" />
+          <MenuCard src="/bluelagoon.jpg" title="Blue Lagoon" />
+          <MenuCard src="/covercucumbergrapefruitcocktail.jpg" title="Orange Cucumber Fizz" />
+          <MenuCard src="/PeachBelini.jpg" title="Frozen Peach Bellini" />
+          <MenuCard
+            src="/cranberrymocktail.jpg"
+            title="Cranberry Mocktail with Pomogranatee"
+          />
+          <MenuCard src="/cucumber.jpeg" title="Cucumber 2 Green Apple Granite" />
+          <MenuCard src="/sexon.jpeg" title="Sex on the Beach" />
+          <MenuCard src="/blue.jpg" title="Berry Basil Martini" />
+        </motion.div>
+      </div>
+      <div className="flex flex-col mt-10">
+        <h4 className="text-lg lg:text-2xl tracking-wide font-semibold">
+          Creamy Crush
+        </h4>
+        <motion.div
+          className="grid mx-auto gap-x-10 md:grid-cols-2 grid-cols-1 gap-y-10 xl:grid-cols-3 py-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <MenuCard src="/oreoshake.jpg" title="Oreo Shake" />
+          <MenuCard src="/cashewpista.webp" title="Cashew Pista Shake" />
+          <MenuCard src="/vanilla.jpg" title="Vanilla Shake" />
+          <MenuCard src="/strawberry.webp" title="Strawberry Shake" />
+          <MenuCard src="/dark.jpg" title="Dark Chocolate Shake" />
+          <MenuCard src="/kitkat.jpg" title="Kitkat Shake" />
+          <MenuCard src="/brownie.jpeg" title="Brownie Shake" />
+          <MenuCard src="/frappe.jpg" title="Mint Coffee Frappe" />
+        </motion.div>
       </div>
     </div>
   );
 };
-
-const MenuCard = ({ title }: { title: string }) => (
-  <Card className="flex-1 flex flex-col">
-    <CardHeader>
-      <CardTitle className="text-white text-xl md:text-2xl lg:text-3xl">{title}</CardTitle>
-      <CardDescription className="text-sm md:text-base">
-      Step into our colorful restro cafe, where every dish is a delightful fusion of flavor and tradition. Treat your taste buds to the richness of our Paneer Tikka Wrap, featuring succulent paneer tikka, onions, and bell peppers, enveloped in a warm, flaky paratha for an authentic Indian street food experience. Sample our crispy Masala Fries, adorned with a tantalizing blend of aromatic spices that evoke the vibrant streets of India. Spice enthusiasts will relish our Tangy Tandoori Gobi, showcasing tender cauliflower florets marinated in a zesty tandoori blend and expertly charred in the tandoor, delivering a burst of smoky flavors with every bite. Craving something cool and refreshing? Our Chaat Salad offers a medley of crunchy papdi, tangy tamarind chutney, fresh yogurt, and an assortment of crisp vegetables, creating a symphony of flavors reminiscent of bustling Indian bazaars. Whether you seek familiar favorites or crave a tantalizing twist, our vegetarian Indian-style fast food menu promises an exhilarating culinary journey through the streets of India with every delectable morsel.
-      </CardDescription>
-    </CardHeader>
-    <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {[1, 2, 3].map((item) => (
-        <div key={item} className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-md">
-          <div className="flex-shrink-0">
-            <Image
-              src="/chole.jpg"
-              alt=""
-              width={64}
-              height={64}
-              className="rounded-full"
-            />
-          </div>
-          <div className="flex flex-col flex-grow">
-            <h3 className="text-base md:text-lg font-semibold text-gray-800">Cholle bhature</h3>
-            <div className="flex-grow border-t border-yellow-400 mt-2"></div>
-          </div>
-        </div>
-      ))}
-    </CardContent>
-    <CardFooter>
-      <Link href="/">
-        <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#AB8A54]">
-          View All Menu -&gt;
-        </button>
-      </Link>
-    </CardFooter>
-  </Card>
-);
-
-const ImageCard = ({ imageSrc, className }: { imageSrc: string, className?: string }) => (
-  <Card className={className}>
-    <CardHeader className="gap-y-10">
-      <Image
-        src={imageSrc}
-        alt=""
-        width={300}
-        height={400}
-        className="rounded-full"
-      />
-      <Image
-        src={imageSrc}
-        alt=""
-        width={300}
-        height={400}
-        className="rounded-full"
-      />
-    </CardHeader>
-  </Card>
-);
 
 export default MenuPage;

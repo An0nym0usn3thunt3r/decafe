@@ -4,10 +4,6 @@ export const navLinks = [
         src: '/',
     },
     {
-        name: 'About',
-        src: '#about',
-    },
-    {
         name: 'Menu',
         src: '/menu',
     },

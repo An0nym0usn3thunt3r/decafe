@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const container = {
@@ -36,29 +37,27 @@ const Hero = () => {
         className="flex flex-col items-center lg:items-start"
       >
         <h1 className="text-2xl md:text-4xl tracking-wide font-semibold">
-          The spot for authentic cuisine and
+        Welcome to Delicious Restro Cafe,
         </h1>
         <h1 className="text-2xl md:text-4xl tracking-wide font-semibold">
-          great customer service
+        where culinary passion meets a cozy atmosphere!
         </h1>
         <p className="text-muted-foreground text-md md:text-lg mt-2 lg:mt-10 max-w-md lg:max-w-2xl font-medium">
-          Your favorite local restaurant is now available for pick-up and
-          delivery options now with Beyond Menu
+        At Delicious Restro Cafe, we pride ourselves on serving a diverse menu crafted from the freshest local ingredients. Whether you&apos;re in the mood for a hearty breakfast, a light lunch, or a delightful dinner, our chefs create dishes that are not only delicious but also beautifully presented.
         </p>
         <div className="flex flex-row py-10 gap-x-5">
-          <button className="px-14 py-3 rounded-md border-x-2 border-y-[3px] tracking-wider font-medium border-[#AB8A54]">
-            Order Online
+          <Link href="/gallery">
+          <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#d67f2e] items-center">
+            Gallery -&gt;
           </button>
-          <button className="space-links text-sm md:text-base text-white px-3 py-2 rounded-md flex pr-5 bg-[#AB8A54] items-center">
-            Menu -&gt;
-          </button>
+          </Link>
         </div>
       </motion.div>
       <motion.div
         variants={item}
         className="flex flex-col items-center lg:items-start"
       >
-        <Image src={"/welcome.png"} alt="" width={400} height={300} />
+        <Image src={"/6.JPG"} alt="" width={400} height={300} className="rounded-3xl aspect-square" />
       </motion.div>
     </motion.div>
   );
