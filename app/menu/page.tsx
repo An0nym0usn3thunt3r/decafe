@@ -64,7 +64,7 @@ const MenuPage = () => {
           <MenuCard src="/vegsandvich.jpg" title="Vegetable sandwich" />
           <MenuCard src="/vegcheesesandvich.webp" title="Veg cheese sandwich" />
           <MenuCard src="/cheesecorn.webp" title="Cheese corn peri peri sandwich" />
-          <MenuCard src="/mexi.jpg" title="Mexican sandwich" />
+          <MenuCard src="/mexican-torta-e1523296104751.jpg" title="Mexican Sandwich" />
           <MenuCard src="/mayosand.jpg" title="Mayo toast sandwich" />
           <MenuCard src="/paneer.jpg" title="Paneer takatak sandwich" />
           {/* <MenuCard src="/panip.jpg" title="Cheesy Tex-Mex Focaccia" /> */}
@@ -85,7 +85,6 @@ const MenuPage = () => {
           <MenuCard src="/vegcheese.jpg" title="Cheese Burger(veg)" />
           <MenuCard src="/paneerburger.jpg" title="Paneer Takatak Burger" />
           <MenuCard src="/frenchfries.jpg" title="French-Fries" />
-          <MenuCard src="/ultapulta.jpg" title="Ulta Pulta Burger" />
           <MenuCard src="/periperi.webp" title="Peri Peri French-Fries" />
           <MenuCard src="/mexicanfries.jpg" title="Mexican Fries" />
         </motion.div>
@@ -105,7 +104,7 @@ const MenuPage = () => {
           <MenuCard src="/buttercheese.jpg" title="Cheese Bhaaji - Pav" />
           <MenuCard src="/vegpulao.jpg" title="Veg pulao" />
           <MenuCard src="/vegtawa.jpg" title="Veg Tawa pulao" />
-          <MenuCard src="/chole.jpg" title="Chana Puri / Kulche" />
+          <MenuCard src="/chanapuri.webp" title="Chana Puri/Kulche" />
         </motion.div>
       </div>
       <div className="flex flex-col mt-10">
