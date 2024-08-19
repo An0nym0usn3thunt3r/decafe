@@ -62,9 +62,9 @@ const Menu = () => {
         initial="hidden"
         animate="visible"
       >
-        <MenuCard src="/chole.jpg" title="Chana Puri" />
-        <MenuCard src="/pizza.jpg" title="Margarita Pizza" />
-        <MenuCard src="/panip.jpg" title="Pani Puri" />
+        <MenuCard src="/chanapuri.webp" title="Chana Puri" />
+        <MenuCard src="/Pizza-3007395.jpg" title="Margarita Pizza" />
+        <MenuCard src="/Pani Puri.JPG" title="Pani Puri" />
         <MenuCard src="/Dahi Papdi Chaat.webp" title="Dahi Papdi Chat" />
         <MenuCard src="/mexi.jpg" title="Mexican Sandwich" />
         <MenuCard src="/gangaghatkichat.JPG" title="Ganga Ghat ki Chaat" />
